@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="./src/images/logo-black.png" width="60" />
+  <a href="https://www.culturefind.io">
+    <img alt="Gatsby" src="./src/images/logo-black.png" width="560" />
   </a>
 </p>
 
