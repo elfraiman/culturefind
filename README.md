@@ -8,6 +8,7 @@
 ## 🚀 Quick start
 Netlify-cms info for gatsby plugin
 https://www.gatsbyjs.org/packages/gatsby-plugin-netlify-cms/?=netlify
-
+Netlify cms Config guide
+https://www.netlifycms.org/docs/add-to-your-site/
 
 <!-- AUTO-GENERATED-CONTENT:END -->
