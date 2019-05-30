@@ -100,7 +100,9 @@ module.exports =
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+module.exports = {
+	"title": "_1YGPllCfSk4MJe6tqlfhK7"
+};
 
 /***/ }),
 
