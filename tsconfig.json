@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+      "baseUrl": ".",
+      "paths": { "*": ["types/*"] },
         "allowJs": true, /* Allow JavaScript files to be type checked. */
         "alwaysStrict": true, /* Parse in strict mode. */
         "esModuleInterop": true, /* matches compilation setting */
