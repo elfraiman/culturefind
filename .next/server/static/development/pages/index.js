@@ -117,7 +117,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.scss */ "./components/header/header.scss");
 /* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_header_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/abdel/hobby/culturefind/components/header/header.tsx";
+var _jsxFileName = "/Users/elan/Documents/culturefind/components/header/header.tsx";
 
 
 
@@ -436,7 +436,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/abdel/hobby/culturefind/pages/index.tsx";
+var _jsxFileName = "/Users/elan/Documents/culturefind/pages/index.tsx";
 
 
 
@@ -478,7 +478,7 @@ function (_React$Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/abdel/hobby/culturefind/pages/index.tsx */"./pages/index.tsx");
+module.exports = __webpack_require__(/*! /Users/elan/Documents/culturefind/pages/index.tsx */"./pages/index.tsx");
 
 
 /***/ }),
