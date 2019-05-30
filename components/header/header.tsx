@@ -7,7 +7,7 @@ function Header() {
       <img
         src='/static/logo-black.png'
         className={css.logo}
-        alt='women laughing'
+        alt='culturefind logo'
       />
       <div className={css.headBtns}>
         <a>Join</a>

@@ -1,9 +1,14 @@
 .header{
-  padding: 16px;
+  padding: 36px;
   height: 50px;
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  left: 0px;
+  top: 16px;
 }
 
 .logo {

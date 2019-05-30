@@ -1,9 +1,14 @@
 .vYTIEEbDgRJzhbxfPUwYo {
-  padding: 16px;
+  padding: 36px;
   height: 50px;
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: absolute;
+  left: 0px;
+  top: 16px; }
 
 ._3AiP2Qi2bk0yE7U66_UFGO {
   width: 120px; }
@@ -15,6 +20,15 @@
 
 ._2CyJ8-oPLMLcjYW9A6YXbV a:hover {
   border-bottom: 1px solid black; }
+
+._2k7NwKpcw-5A9W933ex0MI ._2O0Evase5ecfD_b_mR0tf9 {
+  width: 50%;
+  height: 620px;
+  background: url("/static/laughing-women.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  background-color: red; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
