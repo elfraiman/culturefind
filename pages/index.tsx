@@ -8,9 +8,16 @@ export default class extends React.Component {
       <div>
         <Header />
         <div className={css.home}>
-          <div className={css.sideImage}>
 
+          <div className={css.heroImage}>
           </div>
+
+          <div className={css.heroTitle}>
+            <span className={css.culture}>Culture</span> <span>matters</span>
+            <br/>
+          </div>
+
+          <span className={css.subTitle}>Find the company you'll really click with.</span>  
         </div>
       </div>
     );
