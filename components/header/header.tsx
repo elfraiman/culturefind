@@ -3,8 +3,17 @@ import css from './header.scss';
 
 function Header() {
   return (
-    <div className={css.title}>
-      This is my cool header
+    <div className={css.header}>
+      <img
+        src='/static/logo-black.png'
+        className={css.logo}
+        alt='women laughing'
+      />
+      <div className={css.headBtns}>
+        <a>Join</a>
+        <a>Blog</a>
+        <a>About</a>
+      </div>
     </div>
   );
 }
