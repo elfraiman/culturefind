@@ -1,4 +1,5 @@
 import React from 'react';
+import CompanyCard from '../components/company-card/company-card';
 import Header from '../components/header/header';
 import css from './index.module.scss';
 
@@ -8,17 +9,24 @@ export default class extends React.Component {
       <div>
         <Header />
         <div className={css.home}>
-
-          <div className={css.heroImage}>
-          </div>
+          <div className={css.heroImage} />
 
           <div className={css.heroTitle}>
             <span className={css.culture}>Culture</span> <span>matters</span>
-            <br/>
+            <br />
           </div>
 
-          <span className={css.subTitle}>Find the company you'll really click with.</span>  
+          <span className={css.subTitle}>
+            Find the company you'll really click with.
+          </span>
         </div>
+
+        <CompanyCard
+          logo='../static/company-logos/springtree-logo.png'
+          title='Springtree'
+          subtitle='Front-end developer'
+          location='Almere, The Netherlands'
+        />
       </div>
     );
   }
