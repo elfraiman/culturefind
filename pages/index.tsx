@@ -24,8 +24,9 @@ export default class extends React.Component {
         <CompanyCard
           logo='../static/company-logos/springtree-logo.png'
           title='Springtree'
-          subtitle='Front-end developer'
+          subtitle="Solving puzzles as a profession, who doesn't want that?"
           location='Almere, The Netherlands'
+          positions='3'
         />
       </div>
     );

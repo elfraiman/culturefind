@@ -14,7 +14,7 @@ class MyDocument extends Document {
         <Head>
           <style>{
             `body {
-             font-family: HelveticaNeue;
+             font-family: Helvetica;
              margin: 0px;
              }`}
           </style>

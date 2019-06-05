@@ -6,15 +6,23 @@ interface ICompanyProps {
   subtitle: string;
   location: string;
   logo: string;
+  positions: string;
 }
 
-function CompanyCard( { title, subtitle, location, logo }: ICompanyProps) {
+function CompanyCard( { title, subtitle, location, logo, positions }: ICompanyProps) {
   return (
     <div className={css.card}>
+
+      <div className={css.cardBody}>
       <img src={logo} />
-      <h2>{title}</h2>
-      <h3>{subtitle}</h3>
-      <p>{location}</p>
+        <h2>{title}</h2>
+        <p>{subtitle}</p>
+      </div>
+
+      <div className={css.cardFooter}>
+        <span>{location}</span>
+        <p> {positions} Available positions</p>
+      </div>
     </div>
   );
 }
