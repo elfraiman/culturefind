@@ -13,6 +13,7 @@ module.exports = withPlugins(
   {
     analyzeServer: ['server', 'all'].includes(ANALYZE),
     analyzeBrowser: ['browser', 'all'].includes(ANALYZE),
-    cssModules: true
+    cssModules: true,
+    target: 'serverless'
   }
 )
