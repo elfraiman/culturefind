@@ -8,6 +8,7 @@
 
 
   .cardBody {
+    height: 180px;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -15,16 +16,16 @@
     text-align: center;
 
     img {
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: 80px;
       border-radius: 16px;
     }
   
-    h3 {
-      margin: 0;
+    h2 {
+      margin: 8px;
     }
     p {
-      margin: 8px;
+      margin: 10px;
       font-size: 14px;
     }
   }
