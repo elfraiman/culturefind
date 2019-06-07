@@ -1,15 +1,13 @@
 {
     "defaultSeverity": "error",
     "extends": [
-        "tslint:recommended"
+      "tslint:latest",
+      "tslint-react",
+      "tslint-eslint-rules",
+      "tslint-config-prettier"
     ],
     "jsRules": {},
     "rules": {
-      "member-access": false,
-      "quotemark": [
-        true,
-        "single"
-      ]
     },
     "rulesDirectory": []
 }

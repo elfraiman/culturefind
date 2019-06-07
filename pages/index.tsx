@@ -3,6 +3,7 @@ import { animated, useSpring } from 'react-spring';
 import CompanyCard from '../components/company-card/company-card';
 import Header from '../components/header/header';
 import css from './index.module.scss';
+
 const Index = () => {
   // Should make a global animations file with animations we want
   const fadeIn = useSpring({ opacity: 1, from: { opacity: 0 } });
@@ -12,9 +13,9 @@ const Index = () => {
     marginLeft: 0,
     transform: 'translate3d(0,0px,0)',
     from: {
-      marginLeft: -1000,
+      marginLeft: -2000,
       opacity: 0,
-      transform: 'translate3d(0,-190px,0)'
+      transform: 'translate3d(0,-400px,0)'
     }
   });
 
