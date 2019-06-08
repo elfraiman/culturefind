@@ -13,7 +13,7 @@ const Index = () => {
     marginLeft: 0,
     transform: 'translate3d(0,0px,0)',
     from: {
-      marginLeft: -2000,
+      marginLeft: -1000,
       opacity: 0,
       transform: 'translate3d(0,-400px,0)'
     }
@@ -25,7 +25,7 @@ const Index = () => {
 
     for (let i = 0; i < times; i++) {
       arrayOfCard.push(
-        <animated.div style={trailInLeft}>
+        <animated.div style={fadeIn}>
           <CompanyCard
             logo="../static/company-logos/springtree-logo.png"
             title="Springtree"

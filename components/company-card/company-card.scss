@@ -5,7 +5,7 @@
   border-radius: 16px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background-color: white;
-
+  animation: shimmy 3s infinite;
 
   .cardBody {
     height: 180px;
@@ -43,5 +43,20 @@
       margin: 6px;
       font-weight: 300;
     }
+  }
+}
+
+
+.card:hover {
+  animation: hoverAnimation ease-in-out 0.8s both;
+}
+
+@keyframes hoverAnimation { 
+  0% {
+    transform: translate(0px, 0px) perspective(250px);
+  }
+  100% {
+    transform: translate(5px, 5px)  perspective(500px) rotateY(-15deg);
+    box-shadow: 0 3px 6px rgba(82, 82, 82, 0.637), 0 3px 6px rgba(63, 63, 63, 0.514);
   }
 }
