@@ -1,16 +1,16 @@
-interface IValueFilterGroup {
+export interface IValueFilterGroup {
   name: string;
   color: string;
   filters: IFilter[];
 }
 
-interface IFilter {
+export interface IFilter {
   name: string;
   description: string;
   id: string;
 }
 
-type IValueFilters = IValueFilterGroup[]
+export type IValueFilters = IValueFilterGroup[]
 
 export const valueFilters: IValueFilters = [{
   name: 'team values',

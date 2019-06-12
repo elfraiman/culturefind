@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import { animated, useSpring } from 'react-spring';
 import CompanyCard from '../components/company-card/company-card';
 import Header from '../components/header/header';
-import css from './index.module.scss';
+import RippleBadge from '../components/ripple-button/RippleBadge';
 import { valueFilters } from '../static/values/values';
+import css from './index.module.scss';
 
 const Index = () => {
   // Should make a global animations file with animations we want
@@ -30,8 +31,20 @@ const Index = () => {
     return arrayOfCard;
   };
 
+  const renderValueFilters = () => {
+    const teamValues = valueFilters.find(values => values.name === 'team values')
+
+    const arrayOfDivs: JSX.Element[] = []
+
+    if ( teamValues ) {
+      teamValues.filters.forEach(filter => {
+        arrayOfDivs.push(<RippleBadge text={filter.name}></RippleBadge>)
+      });
+    }
+    return arrayOfDivs;
+  }
   useEffect(() => {
-    console.log(valueFilters);
+    // console.log(valueFilters);
   });
 
   return (
@@ -50,7 +63,12 @@ const Index = () => {
           Find the company you'll really click with.
         </span>
 
-        <div className={css.valuePickerCard} />
+        <div className={css.valuePickerCard}>
+          <div className={css.teamValues}> 
+            {renderValueFilters()}
+          </div>
+          
+        </div>
 
         <div className={css.body}>
           <div className={css.companyCards}>{renderCompanyCards()}</div>

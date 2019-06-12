@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './company-card.scss';
+import css from './company-card.module.scss';
 
 interface ICompanyProps {
   title: string;
