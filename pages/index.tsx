@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { animated, useSpring } from 'react-spring';
 import CompanyCard from '../components/company-card/company-card';
 import Header from '../components/header/header';
-import RippleBadge from '../components/ripple-button/RippleBadge';
+import RippleBadge from '../components/RippleBadge/RippleBadge';
 import { valueFilters } from '../static/values/values';
 import css from './index.module.scss';
 
@@ -41,6 +41,7 @@ const Index = () => {
         arrayOfDivs.push(<RippleBadge text={filter.name}></RippleBadge>)
       });
     }
+
     return arrayOfDivs;
   }
   useEffect(() => {
