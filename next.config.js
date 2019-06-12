@@ -14,6 +14,9 @@ module.exports = withPlugins(
     analyzeServer: ['server', 'all'].includes(ANALYZE),
     analyzeBrowser: ['browser', 'all'].includes(ANALYZE),
     cssModules: true,
-    target: 'serverless'
+    target: 'serverless',
+    sassLoaderOptions: {
+      includePaths: ['node_modules', 'node_modules/@material/*'],
+     }
   }
 )

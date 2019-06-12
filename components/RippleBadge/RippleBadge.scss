@@ -1,0 +1,48 @@
+h1, p {
+  font-family: Lato;
+}
+
+.button-badge {
+  margin: 8px 0px;
+  --mdc-theme-primary: green;
+
+  --text-primary-on-light: black;
+  --text-primary-on-dark: white;
+}
+
+.mdc-button__label {
+  display: flex;
+  align-items: center;
+}
+
+.mdc-button__text {
+  margin-left: 16px;
+  display: block;
+  transition: 300ms;
+}
+
+div.toggled .mdc-button__text {
+  margin-left: 0px;
+}
+
+div.toggled .mdc-button__circle {
+  transform: scale(50);
+}
+
+div.toggled .mdc-button__text {
+  color: var(--text-primary-on-dark);
+  z-index: 2;
+}
+
+.mdc-button__circle {
+  border-radius: 50%;
+  width: 7.5px;
+  height: 7.5px;
+  background-color: var(--mdc-theme-primary);
+  transition: 300ms;
+  position: absolute;
+}
+
+.fuck {
+  color: red;
+}
