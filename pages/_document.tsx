@@ -12,12 +12,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <style>{
-            `body {
-             font-family: Helvetica;
-             margin: 0px;
-             }`}
-          </style>
           <link href='https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap' rel='stylesheet'></link>
         </Head>
         <body>
