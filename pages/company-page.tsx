@@ -1,7 +1,8 @@
 import React from 'react';
 // import { animated, useSpring } from 'react-spring';
 import css from './company-page.module.scss';
-import {Lock} from 'styled-icons/material'
+import { Lock } from 'styled-icons/material'
+
 const CompanyPage = () => {
   return (
     <div className={css.companyPage}>
