@@ -1,10 +1,6 @@
-h1, p {
-  font-family: Lato;
-}
-
 .button-badge {
   margin: 8px 0px;
-  --mdc-theme-primary: green;
+  --mdc-theme-primary: red;
 
   --text-primary-on-light: black;
   --text-primary-on-dark: white;
@@ -41,8 +37,4 @@ div.toggled .mdc-button__text {
   background-color: var(--mdc-theme-primary);
   transition: 300ms;
   position: absolute;
-}
-
-.fuck {
-  color: red;
 }

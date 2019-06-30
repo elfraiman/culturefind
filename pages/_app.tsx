@@ -1,6 +1,7 @@
-import Header from '../components/header/header';
 import App, { Container } from 'next/app';
 import React from 'react';
+import Header from '../components/header/header';
+import './app.global.scss';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }: { Component: any, ctx: any }) {
@@ -18,6 +19,11 @@ class MyApp extends App {
 
     return (
       <>
+        {/* <style jsx global>
+          body {
+            
+          }
+          </style> */}
         <Header />
         <Container>
           <Component {...pageProps} />
