@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MDCRipple } from '@material/ripple';
+// import { MDCRipple } from '@material/ripple';
 import css from './ripple-badge.module.scss';
 
 class RippleBadge extends Component<any, any> {
@@ -12,11 +12,11 @@ class RippleBadge extends Component<any, any> {
       toggled: false
     };
 
-    
+
   }
 
   componentDidMount() {
-    const buttonRipple = new MDCRipple(this.myRef.current);
+    // const buttonRipple = new MDCRipple(this.myRef.current);
   }
 
 

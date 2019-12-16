@@ -1,10 +1,11 @@
 .button-badge {
-  margin: 8px 0px;
-  --mdc-theme-primary: red;
-
+  margin: 6px 0;
+  --mdc-theme-primary: #6250ff;
   --text-primary-on-light: black;
   --text-primary-on-dark: white;
+  height: 26px;
 }
+
 
 .mdc-button__label {
   display: flex;
@@ -15,6 +16,8 @@
   margin-left: 16px;
   display: block;
   transition: 300ms;
+  font-size: 11px;
+  font-weight: 600;
 }
 
 div.toggled .mdc-button__text {
@@ -22,7 +25,7 @@ div.toggled .mdc-button__text {
 }
 
 div.toggled .mdc-button__circle {
-  transform: scale(50);
+  transform: scale(100);
 }
 
 div.toggled .mdc-button__text {
@@ -32,9 +35,10 @@ div.toggled .mdc-button__text {
 
 .mdc-button__circle {
   border-radius: 50%;
-  width: 7.5px;
-  height: 7.5px;
+  width: 5.5px;
+  height: 5.5px;
   background-color: var(--mdc-theme-primary);
-  transition: 300ms;
+  transition: 400ms;
   position: absolute;
 }
+

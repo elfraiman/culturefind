@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import { animated, useSpring } from 'react-spring';
-import CompanyCard from '../components/company-card/company-card';
-import Header from '../components/header/header';
-import RippleBadge from '../components/RippleBadge/RippleBadge';
-import { valueFilters } from '../static/values/values';
-import css from './index.module.scss';
+import React, { useEffect } from "react";
+import { animated, useSpring } from "react-spring";
+import CompanyCard from "../components/company-card/company-card";
+import Header from "../components/header/header";
+import RippleBadge from "../components/RippleBadge/RippleBadge";
+import { valueFilters } from "../static/values/values";
+import css from "./index.module.scss";
 
 const Index = () => {
   // Should make a global animations file with animations we want
@@ -16,7 +16,7 @@ const Index = () => {
 
     for (let i = 0; i < times; i++) {
       arrayOfCard.push(
-        <animated.div style={fadeIn}>
+        <animated.div style={fadeIn} key={i} className={css.card}>
           <CompanyCard
             logo="../static/company-logos/springtree-logo.png"
             title="Springtree"
@@ -28,22 +28,50 @@ const Index = () => {
         </animated.div>
       );
     }
+
     return arrayOfCard;
   };
 
-  const renderValueFilters = () => {
-    const teamValues = valueFilters.find(values => values.name === 'team values')
+  const generateTeamValues = () => {
+    const teamValues = valueFilters.find(
+      values => values.name === "team values"
+    );
 
-    const arrayOfDivs: JSX.Element[] = []
+    const arrayOfDivs: JSX.Element[] = [];
 
-    if ( teamValues ) {
+    if (teamValues) {
       teamValues.filters.forEach(filter => {
-        arrayOfDivs.push(<RippleBadge text={filter.name}></RippleBadge>)
+        arrayOfDivs.push(
+          <li>
+            <RippleBadge text={filter.name}></RippleBadge>
+          </li>
+        );
       });
     }
 
     return arrayOfDivs;
-  }
+  };
+
+  const generatePersonalHealthValues = () => {
+    const healthValues = valueFilters.find(
+      values => values.name === "personal health"
+    );
+
+    const arrayOfDivs: JSX.Element[] = [];
+
+    if (healthValues) {
+      healthValues.filters.forEach(filter => {
+        arrayOfDivs.push(
+          <li>
+            <RippleBadge text={filter.name}></RippleBadge>
+          </li>
+        );
+      });
+    }
+
+    return arrayOfDivs;
+  };
+
   useEffect(() => {
     // console.log(valueFilters);
   });
@@ -60,18 +88,29 @@ const Index = () => {
           <span className={css.culture}>Culture</span> <span>matters</span>
           <br />
         </div>
+
         <span className={css.subTitle}>
           Find the company you'll really click with.
         </span>
+      </div>
 
-        <div className={css.valuePickerCard}>
-          <div className={css.teamValues}> 
-            {renderValueFilters()}
+      <div className={css.body}>
+        <div className={css.innerBody}>
+          <div className={css.valuePickerCard}>
+            <div className={css.teamValues}>
+              <section>
+                <h5>Team Values</h5>
+                <ul>{generateTeamValues()}</ul>
+              </section>
+            </div>
+
+            <div className={css.healthValues}>
+              <section>
+                <h5>Personal Health</h5>
+                <ul>{generatePersonalHealthValues()}</ul>
+              </section>
+            </div>
           </div>
-          
-        </div>
-
-        <div className={css.body}>
           <div className={css.companyCards}>{renderCompanyCards()}</div>
         </div>
       </div>
