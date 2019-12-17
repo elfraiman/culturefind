@@ -9,7 +9,8 @@ class RippleBadge extends Component<any, any> {
     super(props);
     this.state = {
       name: 'React',
-      toggled: false
+      toggled: false,
+      color: 'black'
     };
 
 
@@ -37,8 +38,8 @@ class RippleBadge extends Component<any, any> {
       <div className={rootClasses.join(' ')}>
         <button onClick={this.onClick} className="mdc-button" ref={this.myRef}>
           <span className={css["mdc-button__label"]}>
-            <span className={css["mdc-button__circle"]}></span>
-            <span className={css["mdc-button__text"]}> {this.props.text} </span>
+            <span className={css["mdc-button__circle"]} style={{backgroundColor: this.props.color}}></span>
+            <span className={css["mdc-button__text"]} style={{color: this.props.color}} > {this.props.text} </span>
           </span>
         </button>
       </div>

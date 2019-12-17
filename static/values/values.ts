@@ -10,7 +10,7 @@ export interface IFilter {
   id: string;
 }
 
-export type IValueFilters = IValueFilterGroup[]
+export type IValueFilters = IValueFilterGroup[];
 
 export const valueFilters: IValueFilters = [{
   name: 'team values',
@@ -101,5 +101,175 @@ export const valueFilters: IValueFilters = [{
       id: 'fosters_psychological_safty'
     }
   ]
-}, //   Daily routines, engineering, career growth, strategy, company properties
+},
+{
+  name: 'daily routines',
+  color: 'light blue',
+  filters: [
+    {
+      name: 'EATS LUNCH TOGETHER',
+      description: '',
+      id: 'eats_lunch_together'
+    },
+    {
+      name: 'FLEXIBLE WORK ARRANGEMENTS',
+      description: 'The team uses an alternate to the traditional in-person, 9am to 5pm, 40-hour work week. Engineers have flexibility in their work hours and/or locations.',
+      id: 'flexible_work_arrangements'
+    },
+    {
+      name: 'LIGHT MEETINGS',
+      description: 'Engineers are expected to attend very few meetings each week in recognition that their productivity requires long, uninterrupted time blocks.',
+      id: 'light_meetings'
+    },
+    {
+      name: 'FRIENDS OUTSIDE OF WORK',
+      description: '',
+      id: 'friends_outside_work'
+    },
+  ]
+},
+{
+  name: 'engineering',
+  color: 'green',
+  filters: [
+    {
+      name: 'HIGH QUALITY CODE BASE',
+      description: '',
+      id: 'high_quality_codebase'
+    },
+    {
+      name: 'PAIR PROGRAMS',
+      description: 'Members commonly program in pairs.',
+      id: 'pair_programs'
+    },
+    {
+      name: 'OPEN SOURCE CONTRIBUTOR',
+      description: '',
+      id: 'open_source_contributor'
+    },
+    {
+      name: 'START TO FINISH OWNERSHIP',
+      description: '',
+      id: 'start_to_finish_ownership'
+    },
+    {
+      name: 'USES AGILE',
+      description: '',
+      id: 'uses_agile'
+    },
+    {
+      name: 'CUTTING-EDGE TECHNOLOGIES',
+      description: 'Company that uses up to date tech stack and always looking for the next big thing',
+      id: 'cutting_edge_tech'
+    },
+    {
+      name: 'FAST PACED ENVIRONMENT',
+      description: 'A work environment that is best suited for engineers who want to learn a broad set of skills in a short period of time, enjoy working under a deadline, and/or are energized by changing requirements and technological challenges.',
+      id: 'fast_paced_environment'
+    },
+    {
+      name: 'CONTINUOUS DELIVERY',
+      description: '',
+      id: 'continous_delivery'
+    }
+  ]
+},
+{
+  name: 'career growth',
+  color: 'magenta',
+  filters: [
+    {
+      name: 'PROOTES FROM WITHIN',
+      description: 'The company considers current employees for promotion opportunities before hiring candidates from outside of the organization.',
+      id: 'promotes_from_within'
+    },
+    {
+      name: 'INTERNAL MOBILITY',
+      description: 'Opportunities for multi-directional career transitions.',
+      id: 'internal_mobility'
+    },
+    {
+      name: 'GOOD FOR JUNIOR DEVS',
+      description: 'Junior developers with <1 year of experience are encouraged to apply and can expect mentorship.',
+      id: 'good_for_juniors'
+    },
+    {
+      name: 'HAS INTERNSHIP PROGRAM',
+      description: '',
+      id: 'has_internship_program'
+    },
+    {
+      name: 'HIGH EMPLOYEE RETENTION',
+      description: '',
+      id: 'high_employee_retention'
+    }
+  ]
+},
+{
+  name: 'strategy',
+  color: 'purple',
+  filters: [
+    {
+      name: 'CUSTOMER COMES FIRST',
+      description: '',
+      id: 'customer_comes_first'
+    },
+    {
+      name: 'ENGINEERING-DRIVEN',
+      description: '',
+      id: 'engineering_driven'
+    },
+    {
+      name: 'PRODUCT-DRIVEN',
+      description: '',
+      id: 'product_driven'
+    },
+    {
+      name: 'DESIGN-DRIVEN',
+      description: '',
+      id: 'design_driven'
+    },
+    {
+      name: 'DATA-DRIVEN',
+      description: '',
+      id: 'data_driven'
+    },
+    {
+      name: 'RAPIDLY GROWING TEAM',
+      description: '',
+      id: 'rapidly_growing_team'
+    }
+  ]
+},
+{
+  name: 'company properties',
+  color: 'indigo',
+  filters: [
+    {
+      name: 'B2B',
+      description: 'Business-to-business.',
+      id: 'b2b'
+    },
+    {
+      name: 'B2C',
+      description: 'Business-to-consumer.',
+      id: 'b2c'
+    },
+    {
+      name: 'SELF-FUNDED',
+      description: 'The company is bootstrapped and relies on profits rather than outside investments to finance their operations.',
+      id: 'self_funded'
+    },
+    {
+      name: 'TECHNICAL FOUNDER(S)',
+      description: 'At least one founder had a background in software engineering.',
+      id: 'techincal_founders'
+    },
+    {
+      name: 'REMOTE-OK',
+      description: 'Team is either entirely remote or open to hiring remote engineers.',
+      id: 'remote_ok'
+    }
+  ]
+} //   Daily routines, engineering, career growth, strategy, company properties
 ]

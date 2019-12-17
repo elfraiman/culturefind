@@ -50,9 +50,12 @@
   display: flex;
   justify-content: center;
 
-  h5 {
-    margin: 0px;
-    border-bottom: 1px solid black;
+  .listTitle {
+    border-bottom: 1px solid rgb(173, 173, 173);
+    padding-bottom: 3px;
+    font-weight: 500;
+    text-align: start;
+    font-size: 14px;
   }
 
   .innerBody {
@@ -60,6 +63,7 @@
   }
 
   .valuePickerCard {
+    padding: 16px;
     margin-top: -450px;
     background-color: white;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -67,16 +71,16 @@
     contain: content;
     z-index: 10;
     display: flex;
+    grid-template: 1fr 1fr / auto;
     justify-content: space-between;
-    
-    .teamValues {
-      margin: 0px;
-      padding: 16px;
-    }
 
-    .healthValues {
-      margin: 0px;
+    .values {
+      margin: 0;
       padding: 16px;
+
+      section {
+        margin-bottom: 26px;
+      }
     }
   }
 
