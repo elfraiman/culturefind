@@ -44,8 +44,7 @@ const App = () => {
 
   useEffect(() => {
     createCompanyCards();
-
-  }, []);
+  }, [ ]);
 
   return (
     <div>
