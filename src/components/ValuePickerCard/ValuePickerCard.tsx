@@ -30,7 +30,7 @@ export const ValuePickerCard = () => {
       teamValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
           <li key={index} onClick={() => handleValueClick(filter.name)}>
-            <RippleBadge text={filter.name} color="#6250ff" disabled={currentSelectedValues.length < 5 ? false : true}></RippleBadge>
+            <RippleBadge text={filter.name} color="#6250ff" disabled={false}></RippleBadge>
           </li>
         );
       });
