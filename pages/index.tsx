@@ -1,4 +1,5 @@
-import firebase from "firebase";
+import firebase from "firebase/app";
+import 'firebase/firestore';
 import React, { useState, useEffect } from "react";
 import CompanyCard from "../components/CompanyCard/CompanyCard";
 import Header from "../components/header/header";
@@ -9,7 +10,7 @@ const Index = () => {
   const [companyCards, setCompanyCards] = useState([] as any);
 
   const db = firebase.firestore();
-
+  
 
   // Fetches and renders the company cards from the DB
   //

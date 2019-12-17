@@ -1,7 +1,7 @@
 {
   "name": "culturefind",
   "version": "1.0.0",
-  "description": "",
+  "description": "Find the company you'll really click with",
   "main": "index.js",
   "dependencies": {
     "@material/button": "2.3.0",
@@ -45,7 +45,7 @@
     "type": "git",
     "url": "git+https://github.com/elfraiman/culturefind.git"
   },
-  "author": "Elan Fraiman & Abdel Elmedny",
+  "author": "Elan Fraiman",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/elfraiman/culturefind/issues"
