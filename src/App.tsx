@@ -6,6 +6,7 @@ import css from "./App.module.scss";
 import './firestore';
 import Header from "./components/header/header";
 import { ValuePickerCard } from "./components/ValuePickerCard/ValuePickerCard";
+import stLogo from './assets/company-logos/springtree-logo.png';
 
 const App = () => {
   const [companyCards, setCompanyCards] = useState([] as any);
@@ -27,7 +28,7 @@ const App = () => {
           list.push(
             <CompanyCard
               key={index}
-              logo="../static/company-logos/springtree-logo.png"
+              logo={stLogo}
               title={companyData.title}
               subtitle={companyData.subtitle}
               location={companyData.location}

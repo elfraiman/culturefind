@@ -31,9 +31,11 @@ class RippleBadge extends Component<any, any> {
       rootClasses.push(css['toggled']);
     }
 
+    console.log(this.props.disabled, 'disabled')
+
     return (
       <div className={rootClasses.join(' ')}>
-        <button onClick={this.onClick} className="mdc-button" ref={this.myRef}>
+        <button onClick={this.onClick} className="mdc-button" ref={this.myRef} disabled={this.props.disabled}>
           <span className={css["mdc-button__label"]}>
             <span className={css["mdc-button__circle"]} style={{backgroundColor: this.props.color}}></span>
             <span className={css["mdc-button__text"]} style={{color: this.state.toggled ? 'white' : this.props.color}} > {this.props.text} </span>

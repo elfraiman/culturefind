@@ -5,6 +5,19 @@ import { valueFilters } from '../../assets/values/values';
 
 
 export const ValuePickerCard = () => {
+  let currentSelectedValues: any = [];
+
+  const handleValueClick = (value: string) => {
+
+    if ( !currentSelectedValues.includes(value) && currentSelectedValues.length < 5 ) {
+      currentSelectedValues.push(value);
+      console.log('clicked on', value);
+    } else {
+      currentSelectedValues.pop(value);
+      console.log('clicked off ', value);
+    }
+    
+  }
 
   const generateTeamValues = () => {
     const teamValues = valueFilters.find(
@@ -16,8 +29,8 @@ export const ValuePickerCard = () => {
     if (teamValues) {
       teamValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
-          <li key={index}>
-            <RippleBadge text={filter.name} color="#6250ff"></RippleBadge>
+          <li key={index} onClick={() => handleValueClick(filter.name)}>
+            <RippleBadge text={filter.name} color="#6250ff" disabled={currentSelectedValues.length < 5 ? false : true}></RippleBadge>
           </li>
         );
       });
