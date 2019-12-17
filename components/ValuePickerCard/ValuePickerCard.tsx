@@ -1,7 +1,8 @@
 import React from "react";
-import css from './value-picker-card.module.scss';
-import { valueFilters } from "../static/values/values";
-import RippleBadge from "../components/RippleBadge/RippleBadge";
+import css from './ValuePickerCard.module.scss';
+import RippleBadge from "../RippleBadge/RippleBadge";
+import { valueFilters } from "../../static/values/values";
+
 
 export const ValuePickerCard = () => {
 

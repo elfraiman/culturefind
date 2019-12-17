@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { animated, useSpring } from "react-spring";
-import CompanyCard from "../components/company-card/company-card";
+import CompanyCard from "../components/CompanyCard/CompanyCard";
 import Header from "../components/header/header";
 import css from "./index.module.scss";
-import { ValuePickerCard } from "./value-picker-card";
+import { ValuePickerCard } from "../components/ValuePickerCard/ValuePickerCard";
 
 const Index = () => {
   // Should make a global animations file with animations we want

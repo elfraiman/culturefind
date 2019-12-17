@@ -179,7 +179,7 @@ export const valueFilters: IValueFilters = [{
   color: 'magenta',
   filters: [
     {
-      name: 'PROOTES FROM WITHIN',
+      name: 'PROMOTES FROM WITHIN',
       description: 'The company considers current employees for promotion opportunities before hiring candidates from outside of the organization.',
       id: 'promotes_from_within'
     },

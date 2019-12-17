@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './company-card.module.scss';
+import css from './CompanyCard.module.scss';
 
 interface ICompanyProps {
   title: string;
@@ -9,7 +9,7 @@ interface ICompanyProps {
   positions: string;
 }
 
-function CompanyCard( { title, subtitle, location, logo, positions }: ICompanyProps) {
+const CompanyCard = ( { title, subtitle, location, logo, positions }: ICompanyProps) => {
   return (
     <div className={css.card}>
 

@@ -1,14 +1,15 @@
-import React from 'react';
-import css from './header.module.scss';
+import React from "react";
+import css from "./header.module.scss";
 
-function Header() {
+const Header = () => {
   return (
     <div className={css.header}>
       <img
-        src='/static/logo-black.png'
+        src="/static/logo-black.png"
         className={css.logo}
-        alt='culturefind logo'
+        alt="culturefind company logo"
       />
+
       <div className={css.headBtns}>
         <a>Join</a>
         <a>Blog</a>
