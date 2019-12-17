@@ -1,48 +1,55 @@
-import React, { useEffect } from "react";
-import { animated, useSpring } from "react-spring";
+import firebase from "firebase";
+import React, { useState, useEffect } from "react";
 import CompanyCard from "../components/CompanyCard/CompanyCard";
 import Header from "../components/header/header";
-import css from "./index.module.scss";
 import { ValuePickerCard } from "../components/ValuePickerCard/ValuePickerCard";
+import css from "./index.module.scss";
 
 const Index = () => {
-  // Should make a global animations file with animations we want
-  const fadeIn = useSpring({ opacity: 1, from: { opacity: 0 } });
+  const [companyCards, setCompanyCards] = useState([] as any);
 
-  const renderCompanyCards = () => {
-    const times = 15;
-    const arrayOfCard = [];
+  const db = firebase.firestore();
 
-    for (let i = 0; i < times; i++) {
-      arrayOfCard.push(
-        <animated.div style={fadeIn} key={i} className={css.card}>
-          <CompanyCard
-            logo="../static/company-logos/springtree-logo.png"
-            title="Springtree"
-            subtitle={`Solving puzzles as a profession, who doesn't want that?`}
-            location="Almere, The Netherlands"
-            positions="3"
-          />
-          ,
-        </animated.div>
-      );
-    }
 
-    return arrayOfCard;
-  };
+  // Fetches and renders the company cards from the DB
+  //
+  const createCompanyCards = async ()  => {
+    const list: any = [];
 
+    await db.collection("companies")
+      .get()
+      .then(companies => {
+        companies.docs.forEach((company, index) => {
+          console.log(company.data());
+          const companyData = company.data();
+          list.push(
+            <CompanyCard
+              key={index}
+              logo="../static/company-logos/springtree-logo.png"
+              title={companyData.title}
+              subtitle={companyData.subtitle}
+              location={companyData.location}
+              positions={companyData.positions.length}
+              color={companyData.color}
+            />
+          );
+        });
+      })
+      .catch(error => console.log(error));
+
+      setCompanyCards(list)
+  }
 
   useEffect(() => {
-    // console.log(valueFilters);
-  });
+    createCompanyCards();
+
+  }, []);
 
   return (
     <div>
       <Header />
       <div className={css.heading}>
-        <animated.div style={fadeIn}>
-          <div className={css.heroImage} />
-        </animated.div>
+        <div className={css.heroImage} />
 
         <div className={css.heroTitle}>
           <span className={css.culture}>Culture</span> <span>matters</span>
@@ -57,7 +64,9 @@ const Index = () => {
       <div className={css.body}>
         <div className={css.innerBody}>
           <ValuePickerCard />
-          <div className={css.companyCards}>{renderCompanyCards()}</div>
+          <div className={css.companyCards}>
+            {companyCards ? companyCards : <h2>No Companies</h2>}
+          </div>
         </div>
       </div>
     </div>

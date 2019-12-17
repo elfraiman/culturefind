@@ -1,18 +1,30 @@
+import './app.global.scss';
+
 import App, { Container } from 'next/app';
 import React from 'react';
 import Header from '../components/header/header';
-import './app.global.scss';
+import firestore from './firestore';
 
 class MyApp extends App {
-  static async getInitialProps({ Component, ctx }: { Component: any, ctx: any }) {
+  static async getInitialProps({
+    Component,
+    ctx
+  }: {
+    Component: any;
+    ctx: any;
+  }) {
+
     let pageProps = {};
 
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
     }
 
+    firestore;
+
     return { pageProps };
   }
+
 
   render() {
     const { Component, pageProps } = this.props;

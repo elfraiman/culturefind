@@ -14,9 +14,9 @@ export const ValuePickerCard = () => {
     const arrayOfDivs: JSX.Element[] = [];
 
     if (teamValues) {
-      teamValues.filters.forEach(filter => {
+      teamValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
-          <li>
+          <li key={index}>
             <RippleBadge text={filter.name} color="#6250ff"></RippleBadge>
           </li>
         );
@@ -34,9 +34,9 @@ export const ValuePickerCard = () => {
     const arrayOfDivs: JSX.Element[] = [];
 
     if (healthValues) {
-      healthValues.filters.forEach(filter => {
+      healthValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
-          <li>
+          <li key={index}>
             <RippleBadge text={filter.name} color="#06D6A0"></RippleBadge>
           </li>
         );
@@ -54,9 +54,9 @@ export const ValuePickerCard = () => {
     const arrayOfDivs: JSX.Element[] = [];
 
     if (dailyRoutinesValues) {
-      dailyRoutinesValues.filters.forEach(filter => {
+      dailyRoutinesValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
-          <li>
+          <li key={index}>
             <RippleBadge text={filter.name} color="#118AB2"></RippleBadge>
           </li>
         );
@@ -74,9 +74,9 @@ export const ValuePickerCard = () => {
     const arrayOfDivs: JSX.Element[] = [];
 
     if (engineeringValues) {
-      engineeringValues.filters.forEach(filter => {
+      engineeringValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
-          <li>
+          <li key={index}>
             <RippleBadge text={filter.name} color="#EF476F"></RippleBadge>
           </li>
         );
@@ -94,9 +94,9 @@ export const ValuePickerCard = () => {
     const arrayOfDivs: JSX.Element[] = [];
 
     if (careerGrowthValues) {
-      careerGrowthValues.filters.forEach(filter => {
+      careerGrowthValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
-          <li>
+          <li key={index}>
             <RippleBadge text={filter.name} color="#073B4C"></RippleBadge>
           </li>
         );
@@ -114,9 +114,9 @@ export const ValuePickerCard = () => {
     const arrayOfDivs: JSX.Element[] = [];
 
     if (strategyValues) {
-      strategyValues.filters.forEach(filter => {
+      strategyValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
-          <li>
+          <li key={index}>
             <RippleBadge text={filter.name} color="#EF5DE1"></RippleBadge>
           </li>
         );
@@ -134,9 +134,9 @@ export const ValuePickerCard = () => {
     const arrayOfDivs: JSX.Element[] = [];
 
     if (companyPropertiesValues) {
-      companyPropertiesValues.filters.forEach(filter => {
+      companyPropertiesValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
-          <li>
+          <li key={index}>
             <RippleBadge text={filter.name} color='#156EDB'></RippleBadge>
           </li>
         );
