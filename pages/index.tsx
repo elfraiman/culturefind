@@ -164,7 +164,7 @@ const Index = () => {
       companyPropertiesValues.filters.forEach(filter => {
         arrayOfDivs.push(
           <li>
-            <RippleBadge text={filter.name} color={'green'}></RippleBadge>
+            <RippleBadge text={filter.name} color='#156EDB'></RippleBadge>
           </li>
         );
       });
