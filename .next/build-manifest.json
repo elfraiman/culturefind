@@ -1,0 +1,47 @@
+{
+  "devFiles": [],
+  "pages": {
+    "/": [
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.5d1c3e334daf9d26f33d.js",
+      "static/css/styles.9a62e7e6.chunk.css",
+      "static/chunks/styles.f2599896851f3ca4efa8.js",
+      "static/runtime/main-ba04cdaa1d4acec599f0.js"
+    ],
+    "/_app": [
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.5d1c3e334daf9d26f33d.js",
+      "static/css/styles.9a62e7e6.chunk.css",
+      "static/chunks/styles.f2599896851f3ca4efa8.js",
+      "static/runtime/main-ba04cdaa1d4acec599f0.js"
+    ],
+    "/_error": [
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.5d1c3e334daf9d26f33d.js",
+      "static/runtime/main-ba04cdaa1d4acec599f0.js"
+    ],
+    "/company-page": [
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.5d1c3e334daf9d26f33d.js",
+      "static/css/styles.9a62e7e6.chunk.css",
+      "static/chunks/styles.f2599896851f3ca4efa8.js",
+      "static/runtime/main-ba04cdaa1d4acec599f0.js"
+    ],
+    "/contact": [
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/runtime/main-ba04cdaa1d4acec599f0.js"
+    ],
+    "/firestore": [
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.5d1c3e334daf9d26f33d.js",
+      "static/runtime/main-ba04cdaa1d4acec599f0.js"
+    ],
+    "/index": [
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.5d1c3e334daf9d26f33d.js",
+      "static/css/styles.9a62e7e6.chunk.css",
+      "static/chunks/styles.f2599896851f3ca4efa8.js",
+      "static/runtime/main-ba04cdaa1d4acec599f0.js"
+    ]
+  }
+}
