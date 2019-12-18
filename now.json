@@ -1,7 +1,6 @@
 {
   "build": {
     "env": {
-      "VARIABLE_NAME": "@secret-name",
       "SASS": "SASS_PATH=node_modules:src"
     }
   }
