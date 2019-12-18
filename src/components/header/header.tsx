@@ -1,15 +1,11 @@
-import React from "react";
-import css from "./Header.module.scss";
+import css from './header.module.scss';
 import logo from '../../assets/logo-black.png';
+import React from 'react';
 
 const Header = () => {
   return (
     <div className={css.header}>
-      <img
-        src={logo}
-        className={css.logo}
-        alt="culturefind company logo"
-      />
+      <img src={logo} className={css.logo} alt="culturefind company logo" />
 
       <div className={css.headBtns}>
         <a href="/">Join</a>
@@ -18,6 +14,6 @@ const Header = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Header;

@@ -4,18 +4,20 @@ import React, { useState, useEffect } from 'react';
 import CompanyCard from './components/CompanyCard/CompanyCard';
 import css from './App.module.scss';
 import './firestore';
-import Header from './components/header/Header';
 import { ValuePickerCard } from './components/ValuePickerCard/ValuePickerCard';
 import stLogo from './assets/company-logos/springtree-logo.png';
 import { useSpring, animated } from 'react-spring';
+import Header from './components/header/header';
 
 const App = () => {
   const [companyCards, setCompanyCards] = useState([] as any);
 
   const db = firebase.firestore();
 
+  // Heading animations
   const titleProps = useSpring({ opacity: 1, marginLeft: 12, from: { opacity: 0, marginLeft: -1600 } });
   const subTitleProps = useSpring({ opacity: 1, marginTop: 0, from: { opacity: 0, marginTop: 1000 } });
+
   // Fetches and renders the company cards from the DB
   //
   const createCompanyCards = async () => {
