@@ -1,25 +1,28 @@
-import firebase from "firebase";
+import firebase from 'firebase';
 import 'firebase/firestore';
-import React, { useState, useEffect } from "react";
-import CompanyCard from "./components/CompanyCard/CompanyCard";
-import css from "./App.module.scss";
+import React, { useState, useEffect } from 'react';
+import CompanyCard from './components/CompanyCard/CompanyCard';
+import css from './App.module.scss';
 import './firestore';
-import Header from "./components/header/header";
-import { ValuePickerCard } from "./components/ValuePickerCard/ValuePickerCard";
+import Header from './components/header/Header';
+import { ValuePickerCard } from './components/ValuePickerCard/ValuePickerCard';
 import stLogo from './assets/company-logos/springtree-logo.png';
+import { useSpring, animated } from 'react-spring';
 
 const App = () => {
   const [companyCards, setCompanyCards] = useState([] as any);
 
   const db = firebase.firestore();
-  
 
+  const titleProps = useSpring({ opacity: 1, marginLeft: 12, from: { opacity: 0, marginLeft: -1600 } });
+  const subTitleProps = useSpring({ opacity: 1, marginTop: 0, from: { opacity: 0, marginTop: 1000 } });
   // Fetches and renders the company cards from the DB
   //
-  const createCompanyCards = async ()  => {
+  const createCompanyCards = async () => {
     const list: any = [];
 
-    await db.collection("companies")
+    await db
+      .collection('companies')
       .get()
       .then(companies => {
         companies.docs.forEach((company, index) => {
@@ -28,7 +31,7 @@ const App = () => {
           list.push(
             <CompanyCard
               key={index}
-              logo={stLogo}
+              logo={companyData.logo ? companyData.logo : stLogo}
               title={companyData.title}
               subtitle={companyData.subtitle}
               location={companyData.location}
@@ -40,27 +43,27 @@ const App = () => {
       })
       .catch(error => console.log(error));
 
-      setCompanyCards(list)
-  }
+    setCompanyCards(list);
+  };
 
   useEffect(() => {
     createCompanyCards();
-  }, [ ]);
+  }, []);
 
   return (
     <div>
       <Header />
       <div className={css.heading}>
         <div className={css.heroImage} />
-
-        <div className={css.heroTitle}>
+        
+        <animated.div style={titleProps} className={css.heroTitle}>
           <span className={css.culture}>Culture</span> <span>matters</span>
           <br />
-        </div>
+        </animated.div>
 
-        <span className={css.subTitle}>
+        <animated.div style={subTitleProps} className={css.subTitle}>
           Find the company you'll really click with.
-        </span>
+        </animated.div>
       </div>
 
       <div className={css.body}>

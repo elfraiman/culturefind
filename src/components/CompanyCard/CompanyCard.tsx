@@ -21,7 +21,12 @@ const CompanyCard = ({
   return (
     <div className={css.card}>
       <div className={css.cardBody}>
-        <img src={logo} alt="company logo"/>
+        <div className={css.img} style={{
+          backgroundImage: `url(${logo})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat'
+        }} />
         <h2>{title}</h2>
         <p>{subtitle}</p>
       </div>

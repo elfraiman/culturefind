@@ -12,7 +12,7 @@
 }
 
 .logo {
-  width: 120px;
+  width: 150px;
 }
 
 .headBtns {
@@ -20,6 +20,8 @@
     padding: 0 16px 6px 16px;
     font-family: 'helvetica';
     cursor: pointer;
+    text-decoration: none;
+    color: black;
   }
 
   a:hover {
