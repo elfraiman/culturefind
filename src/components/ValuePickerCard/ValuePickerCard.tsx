@@ -30,7 +30,7 @@ export const ValuePickerCard = () => {
       teamValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
           <li key={index} onClick={() => handleValueClick(filter.name)}>
-            <RippleBadge text={filter.name} color="#6250ff" disabled={false}></RippleBadge>
+            <RippleBadge text={filter.name} color="#6250ff" description={filter.description}></RippleBadge>
           </li>
         );
       });
@@ -50,7 +50,7 @@ export const ValuePickerCard = () => {
       healthValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
           <li key={index}>
-            <RippleBadge text={filter.name} color="#06D6A0"></RippleBadge>
+            <RippleBadge text={filter.name} description={filter.description} color="#06D6A0"></RippleBadge>
           </li>
         );
       });
@@ -70,7 +70,7 @@ export const ValuePickerCard = () => {
       dailyRoutinesValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
           <li key={index}>
-            <RippleBadge text={filter.name} color="#118AB2"></RippleBadge>
+            <RippleBadge text={filter.name} description={filter.description} color="#118AB2"></RippleBadge>
           </li>
         );
       });
@@ -90,7 +90,7 @@ export const ValuePickerCard = () => {
       engineeringValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
           <li key={index}>
-            <RippleBadge text={filter.name} color="#EF476F"></RippleBadge>
+            <RippleBadge text={filter.name} description={filter.description} color="#EF476F"></RippleBadge>
           </li>
         );
       });
@@ -110,7 +110,7 @@ export const ValuePickerCard = () => {
       careerGrowthValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
           <li key={index}>
-            <RippleBadge text={filter.name} color="#073B4C"></RippleBadge>
+            <RippleBadge text={filter.name} description={filter.description} color="#073B4C"></RippleBadge>
           </li>
         );
       });
@@ -130,7 +130,7 @@ export const ValuePickerCard = () => {
       strategyValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
           <li key={index}>
-            <RippleBadge text={filter.name} color="#EF5DE1"></RippleBadge>
+            <RippleBadge text={filter.name} description={filter.description} color="#EF5DE1"></RippleBadge>
           </li>
         );
       });
@@ -150,7 +150,7 @@ export const ValuePickerCard = () => {
       companyPropertiesValues.filters.forEach((filter, index) => {
         arrayOfDivs.push(
           <li key={index}>
-            <RippleBadge text={filter.name} color='#156EDB'></RippleBadge>
+            <RippleBadge text={filter.name} description={filter.description} color='#156EDB'></RippleBadge>
           </li>
         );
       });

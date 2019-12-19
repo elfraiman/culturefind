@@ -17,12 +17,11 @@ class RippleBadge extends Component<any, any> {
     // const buttonRipple = new MDCRipple(this.myRef.current);
   }
 
-
   onClick = () => {
     this.setState({
       toggled: !this.state.toggled
     });
-  }
+  };
 
   render() {
     const rootClasses = [css['button-badge']];
@@ -31,20 +30,48 @@ class RippleBadge extends Component<any, any> {
       rootClasses.push(css['toggled']);
     }
 
-    console.log(this.props.disabled, 'disabled')
+    console.log(this.props.disabled, 'disabled');
 
     return (
-      <div className={rootClasses.join(' ')}>
-        <button onClick={this.onClick} className="mdc-button" ref={this.myRef} disabled={this.props.disabled}>
-          <span className={css["mdc-button__label"]}>
-            <span className={css["mdc-button__circle"]} style={{backgroundColor: this.props.color}}></span>
-            <span className={css["mdc-button__text"]} style={{color: this.state.toggled ? 'white' : this.props.color}} > {this.props.text} </span>
+      <div className={css.tooltip}>
+        {this.props.description ? (
+          <span
+            className={css.tooltiptext}
+            style={{ backgroundColor: this.props.color }}
+          >
+            {this.props.description}
           </span>
-        </button>
+        ) : (
+          <></>
+        )}
+
+        <div className={rootClasses.join(' ')}>
+          <button
+            onClick={this.onClick}
+            className="mdc-button"
+            ref={this.myRef}
+            disabled={this.props.disabled}
+          >
+            <span className={css['mdc-button__label']}>
+              <span
+                className={css['mdc-button__circle']}
+                style={{ backgroundColor: this.props.color }}
+              ></span>
+              <span
+                className={css['mdc-button__text']}
+                style={{
+                  color: this.state.toggled ? 'white' : this.props.color
+                }}
+              >
+                {' '}
+                {this.props.text}{' '}
+              </span>
+            </span>
+          </button>
+        </div>
       </div>
     );
   }
 }
-
 
 export default RippleBadge;
