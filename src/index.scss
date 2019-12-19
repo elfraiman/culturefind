@@ -1,5 +1,15 @@
 @import '~@material/button/mdc-button.scss';
 
+@font-face {
+	font-family: "helvetica";
+	src: url("./assets/fonts/HelveticaNeueMed.ttf") format("truetype")
+}
+
+@font-face {
+	font-family: "helvetica-bold";
+	src: url("./assets/fonts/HelveticaNeuBold.ttf") format("truetype")
+}
+
 body {
   margin: 0px;
   font-family: 'helvetica', Helvetica, Roboto, 'Roboto';
@@ -7,10 +17,5 @@ body {
 
 body {
   margin: 0;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
