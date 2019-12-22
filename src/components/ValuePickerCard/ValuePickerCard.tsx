@@ -3,7 +3,6 @@ import css from './ValuePickerCard.module.scss';
 import RippleBadge from "../RippleBadge/RippleBadge";
 import { valueFilters } from '../../assets/values/values';
 
-
 export const ValuePickerCard = () => {
   let currentSelectedValues: any = [];
 

@@ -1,81 +1,36 @@
-import firebase from 'firebase';
-import 'firebase/firestore';
-import React, { useState, useEffect } from 'react';
-import CompanyCard from './components/CompanyCard/CompanyCard';
-import css from './App.module.scss';
-import './firestore';
-import { ValuePickerCard } from './components/ValuePickerCard/ValuePickerCard';
-import stLogo from './assets/company-logos/springtree-logo.png';
-import { useSpring, animated } from 'react-spring';
-import Header from './components/header/header';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import About from './pages/about/About';
+import CompanyPage from './pages/company-page/CompanyPage';
+import HomePage from './pages/home/HomePage';
 
 const App = () => {
-  const [companyCards, setCompanyCards] = useState([] as any);
-
-  const db = firebase.firestore();
-
-  // Heading animations
-  const titleProps = useSpring({ opacity: 1, marginLeft: 12, from: { opacity: 0, marginLeft: -1600 } });
-  const subTitleProps = useSpring({ opacity: 1, marginTop: 0, from: { opacity: 0, marginTop: 1000 } });
-
-  // Fetches and renders the company cards from the DB
-  //
-  const createCompanyCards = async () => {
-    const list: any = [];
-
-    await db
-      .collection('companies')
-      .get()
-      .then(companies => {
-        companies.docs.forEach((company, index) => {
-          console.log(company.data());
-          const companyData = company.data();
-          list.push(
-            <CompanyCard
-              key={index}
-              logo={companyData.logo ? companyData.logo : stLogo}
-              title={companyData.title}
-              subtitle={companyData.subtitle}
-              location={companyData.location}
-              positions={companyData.positions.length}
-              color={companyData.color}
-            />
-          );
-        });
-      })
-      .catch(error => console.log(error));
-
-    setCompanyCards(list);
-  };
-
-  useEffect(() => {
-    createCompanyCards();
-  }, []);
-
   return (
     <div>
-      <Header />
-      <div className={css.heading}>
-        <div className={css.heroImage} />
-        
-        <animated.div style={titleProps} className={css.heroTitle}>
-          <span className={css.culture}>Culture</span> <span>matters</span>
-          <br />
-        </animated.div>
+      <Switch>
+        {/* If the current URL is /about, this route is rendered
+          while the rest are ignored */}
+        <Route path="/about">
+          <About />
+        </Route>
 
-        <animated.div style={subTitleProps} className={css.subTitle}>
-          Find the company you'll really click with.
-        </animated.div>
-      </div>
+        {/* Note how these two routes are ordered. The more specific
+          path="/contact/:id" comes before path="/contact" so that
+          route will render when viewing an individual contact */}
+        <Route path="/company-page/:id">
+          <CompanyPage />
+        </Route>
 
-      <div className={css.body}>
-        <div className={css.innerBody}>
-          <ValuePickerCard />
-          <div className={css.companyCards}>
-            {companyCards ? companyCards : <h2>No Companies</h2>}
-          </div>
-        </div>
-      </div>
+        {/* If none of the previous routes render anything,
+          this route acts as a fallback.
+
+          Important: A route with path="/" will *always* match
+          the URL because all URLs begin with a /. So that's
+          why we put this one last of all */}
+        <Route path="/">
+          <HomePage />
+        </Route>
+      </Switch>
     </div>
   );
 };

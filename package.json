@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@firebase/firestore": "^1.9.1",
     "@material/button": "^0.40.0",
     "@material/ripple": "^2.3.0",
     "@statickit/react": "^1.2.0",
@@ -17,6 +18,7 @@
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
     "react-spring": "^8.0.27",
     "sass": "^1.23.7",
