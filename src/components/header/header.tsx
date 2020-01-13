@@ -2,12 +2,18 @@ import css from './header.module.scss';
 import logo from '../../assets/logo-black.png';
 import React from 'react';
 
-const Header = () => {
+interface IHeaderProps {
+  inverseColor?: boolean;
+}
+
+const Header = ({ inverseColor }: IHeaderProps) => {
   return (
     <div className={css.header}>
       <img src={logo} className={css.logo} alt="culturefind company logo" />
 
-      <div className={css.headBtns}>
+      <div
+        className={inverseColor ? css.whiteText : css.blackText}
+      >
         <a href="/">Join</a>
         <a href="/">Blog</a>
         <a href="/">About</a>

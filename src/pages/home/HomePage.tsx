@@ -8,7 +8,7 @@ import stLogo from '../../assets/company-logos/springtree-logo.png';
 import { useSpring, animated } from 'react-spring';
 import CompanyCard from '../../components/CompanyCard/CompanyCard';
 import Header from '../../components/header/header';
-import {ValuePickerCard} from '../../components/ValuePickerCard/ValuePickerCard';
+import { ValuePickerCard } from '../../components/ValuePickerCard/ValuePickerCard';
 
 const HomePage = () => {
   const [companyCards, setCompanyCards] = useState([] as any);
@@ -16,8 +16,16 @@ const HomePage = () => {
   const db = firebase.firestore();
 
   // Heading animations
-  const titleProps = useSpring({ opacity: 1, marginLeft: 12, from: { opacity: 0, marginLeft: -1600 } });
-  const subTitleProps = useSpring({ opacity: 1, marginTop: 0, from: { opacity: 0, marginTop: 1000 } });
+  const titleProps = useSpring({
+    opacity: 1,
+    marginLeft: 12,
+    from: { opacity: 0, marginLeft: -1600 }
+  });
+  const subTitleProps = useSpring({
+    opacity: 1,
+    marginTop: 0,
+    from: { opacity: 0, marginTop: 1000 }
+  });
 
   // Fetches and renders the company cards from the DB
   //
@@ -51,6 +59,7 @@ const HomePage = () => {
 
   useEffect(() => {
     createCompanyCards();
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -58,7 +67,7 @@ const HomePage = () => {
       <Header />
       <div className={css.heading}>
         <div className={css.heroImage} />
-        
+
         <animated.div style={titleProps} className={css.heroTitle}>
           <span className={css.culture}>Culture</span> <span>matters</span>
           <br />
@@ -74,6 +83,13 @@ const HomePage = () => {
           <ValuePickerCard />
           <div className={css.companyCards}>
             {companyCards ? companyCards : <h2>No Companies</h2>}
+            <CompanyCard
+              title={'Springtree'}
+              subtitle={'where software grows'}
+              logo={stLogo}
+              location={'Almere'}
+              positions={'5'}
+            />
           </div>
         </div>
       </div>
