@@ -30,8 +30,6 @@ class RippleBadge extends Component<any, any> {
       rootClasses.push(css['toggled']);
     }
 
-    console.log(this.props.disabled, 'disabled');
-
     return (
       <div className={css.tooltip}>
         {this.props.description ? (

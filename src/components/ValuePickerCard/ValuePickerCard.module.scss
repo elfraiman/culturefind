@@ -38,6 +38,15 @@ ul {
 	.valuePickerCard {
     display: block;
     margin-top: -250px;
-    margin-bottom: 26px;
+		margin-bottom: 26px;
+		padding: 0px;
+		max-width: 300px;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 1024px) { 
+	.valuePickerCard {
+		width: 800px;	
 	}
 }

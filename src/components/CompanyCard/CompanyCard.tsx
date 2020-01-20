@@ -2,7 +2,7 @@ import React from 'react';
 import css from './CompanyCard.module.scss';
 import { useSpring, animated } from 'react-spring';
 
-interface ICompanyProps {
+export interface ICompanyData {
   title: string;
   subtitle: string;
   location: string;
@@ -18,7 +18,7 @@ const CompanyCard = ({
   logo,
   positions,
   color
-}: ICompanyProps) => {
+}: ICompanyData) => {
   const calc: any = (x: number, y: number) => [
     -(y - window.innerHeight / 2) / 20,
     (x - window.innerWidth / 2) / 20,

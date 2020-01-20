@@ -1,71 +1,76 @@
 .button-badge {
-  margin: 6px 0;
-  --mdc-theme-primary: #6250ff;
-  --text-primary-on-light: black;
-  --text-primary-on-dark: white;
-  height: 26px;
-  width: 250px;
+	margin: 6px 0;
+	--mdc-theme-primary: #6250ff;
+	--text-primary-on-light: black;
+	--text-primary-on-dark: white;
+	height: 26px;
+	width: 250px;
 }
 
 .mdc-button__label {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .mdc-button__text {
-  margin-left: 16px;
-  display: block;
-  transition: 300ms;
-  font-size: 11px;
-  font-weight: 600;
-  text-align: start;
+	margin-left: 16px;
+	display: block;
+	transition: 300ms;
+	font-size: 11px;
+	font-weight: 600;
+	text-align: start;
 }
 
 div.toggled .mdc-button__text {
-  margin-left: 0px;
+	margin-left: 0px;
 }
 
 div.toggled .mdc-button__circle {
-  transform: scale(100);
+	transform: scale(100);
 }
 
 div.toggled .mdc-button__text {
-  z-index: 2;
+	z-index: 2;
 }
 
 .mdc-button__circle {
-  border-radius: 50%;
-  width: 5px;
-  height: 5px;
-  //background-color: var(--mdc-theme-primary);
-  transition: 400ms;
-  position: absolute;
+	border-radius: 50%;
+	width: 5px;
+	height: 5px;
+	//background-color: var(--mdc-theme-primary);
+	transition: 400ms;
+	position: absolute;
 }
-
-
 
 // tooltip
 .tooltip {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 100%;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 6px;
-  font-size: 13px;
+	visibility: hidden;
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 4px;
+	font-size: 12px;
 
-  /* Position the tooltip */
-  position: absolute;
-  left: 220px;
-  top: 5px;
-  z-index: 12;
+	/* Position the tooltip */
+	position: absolute;
+	top: 40px;
+	z-index: 12;
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+	visibility: visible;
+}
+
+
+@media screen and (max-width: 720px) {
+	// tooltip
+	.tooltiptext {
+    display: none;  
+  }
 }

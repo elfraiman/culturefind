@@ -1,14 +1,16 @@
-import firebase from 'firebase';
+import '../../firestore';
 import 'firebase/firestore';
 
-import React, { useState, useEffect } from 'react';
-import css from './HomePage.module.scss';
-import '../../firestore';
+import firebase from 'firebase';
+import React, { useEffect, useState } from 'react';
+import { animated, useSpring } from 'react-spring';
+
 import stLogo from '../../assets/company-logos/springtree-logo.png';
-import { useSpring, animated } from 'react-spring';
 import CompanyCard from '../../components/CompanyCard/CompanyCard';
 import Header from '../../components/header/header';
 import { ValuePickerCard } from '../../components/ValuePickerCard/ValuePickerCard';
+import css from './HomePage.module.scss';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   const [companyCards, setCompanyCards] = useState([] as any);
@@ -40,15 +42,17 @@ const HomePage = () => {
           console.log(company.data());
           const companyData = company.data();
           list.push(
-            <CompanyCard
-              key={index}
-              logo={companyData.logo ? companyData.logo : stLogo}
-              title={companyData.title}
-              subtitle={companyData.subtitle}
-              location={companyData.location}
-              positions={companyData.positions.length}
-              color={companyData.color}
-            />
+            <Link to={`/company-page/${companyData.title}`}>
+              <CompanyCard
+                key={index}
+                logo={companyData.logo ? companyData.logo : stLogo}
+                title={companyData.title}
+                subtitle={companyData.subtitle}
+                location={companyData.location}
+                positions={companyData.positions.length}
+                color={companyData.color}
+              />
+            </Link>
           );
         });
       })

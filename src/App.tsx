@@ -17,7 +17,7 @@ const App = () => {
         {/* Note how these two routes are ordered. The more specific
           path="/contact/:id" comes before path="/contact" so that
           route will render when viewing an individual contact */}
-        <Route path="/company-page/:id">
+        <Route path="/company-page/:company">
           <CompanyPage />
         </Route>
 
